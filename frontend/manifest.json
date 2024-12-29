@@ -15,19 +15,10 @@
     "http://127.0.0.1:8000/" 
   ],
   "permissions": [
-    "activeTab",
-    "scripting",
     "contextMenus", 
-    "storage", 
-    "notifications"
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": ["popup.js"],
-      "matches": ["http://*/*", "https://*/*"]
-    }
+    "storage"
   ],
   "background": {
     "service_worker": "service-worker.js"
-}
+  }
 }
