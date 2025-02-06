@@ -1,0 +1,11 @@
+Thời gian huấn luyện: 7845.38 giây
+Thời gian dự đoán: 15.62 giây
+Accuracy on test set: 0.7960
+              precision    recall  f1-score   support
+
+   Non-toxic       0.94      0.83      0.88       890
+       Toxic       0.28      0.54      0.37       110
+
+    accuracy                           0.80      1000
+   macro avg       0.61      0.68      0.62      1000
+weighted avg       0.86      0.80      0.82      1000

@@ -1,4 +1,6 @@
-const API_URL = 'http://localhost:8000/predict'; // Địa chỉ API FastAPI
+const SERVER_URL = 'http://duynm2310.com:8000'; // Địa chỉ API FastAPI
+const LOCAL_URL = 'http://localhost:8000'; // Địa chỉ API FastAPI
+const API_URL = SERVER_URL+'/predict'; // Địa chỉ API FastAPI
 
 // Setup context menu on extension installation
 chrome.runtime.onInstalled.addListener(() => {
@@ -16,6 +18,7 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
   if (!selectedText) return;
 
   try {
+    
     const result = await fetchPrediction(selectedText);
 
     if (result?.prediction !== undefined) {

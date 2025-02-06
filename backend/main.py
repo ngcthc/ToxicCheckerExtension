@@ -94,7 +94,15 @@ async def predict_text(request: TextRequest):
                 "prediction": prediction}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@app.get("/health")
+async def health_check():
+    """
+    Endpoint để kiểm tra trạng thái ứng dụng.
+    Trả về "OK" nếu server đang chạy.
+    """
+    return {"status": "OK"}
 
 # Chạy server
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
